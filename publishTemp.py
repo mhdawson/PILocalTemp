@@ -41,8 +41,8 @@ def read_temp():
 
 while True:
         temp = read_temp()
-        mqttClient.publish("house/temp2", str(math.trunc(time.time())) + ", temp:" + str(temp))
-        mqttClient.publish("house/time", str(math.trunc(time.time())) + ", time:" + str(strftime('%H %M %S')))
+        result1 = mqttClient.publish("house/temp2", str(math.trunc(time.time())) + ", temp:" + str(temp))
+        result2 = mqttClient.publish("house/time", str(math.trunc(time.time())) + ", time:" + str(strftime('%H %M %S')))
+        if (result1[0] != paho.MQTT_ERR_SUCCESS) or (result2[0] != paho.MQTT_ERR_SUCCESS):
+            reconnect();
         time.sleep(10)
-
-
