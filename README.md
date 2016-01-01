@@ -7,6 +7,9 @@ to an mqtt broker
 
 TODO (standard DS18B20 connection to 1 wire)
 
+PCB layout for board that includes this circuit and those for other
+related projects: [PI433-RX-TX-Temp-board](https://github.com/mhdawson/PI433-RX-TX-Temp-board)
+
 
 ## To install/run:
 + git clone https://github.com/mhdawson/PILocalTemp.git
